@@ -8,14 +8,14 @@
 # 使用
 1. 引入文件。
 
-```
+``` html
 <link rel="stylesheet" href="animate.min.css">
 <script src="motion.min.js"></script>
 ```
 
 2. 编写HTML代码
 
-```
+``` html
 <div class="motion"
     data-motion-name="slideInDown"
     data-motion-duration="1s"
@@ -25,7 +25,7 @@
 
 3. 创建Motion实例
 
-```
+``` js
 var motionInstance = motion({
     selector: ".motion"
 });
@@ -79,7 +79,7 @@ var motionInstance = motion({
 }"></div>
 ```
 
-3. 多个队列多个动画
+4. 多个队列多个动画
 
 ``` html
 <div class="motion" data-motion="{
