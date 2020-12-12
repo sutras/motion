@@ -1,0 +1,121 @@
+/* 
+* @Author: batJS
+* @Date:   2018-04-11 10:16:17
+* @Last Modified by:   batJS
+* @Last Modified time: 2019-10-29 12:08:28
+*/
+/*slide*/
+.motion-container {
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.motion-wrapper {
+    width: 3000px;
+    height: 400px;
+    overflow: hidden;
+    transition: margin-left 0.3s ease;
+}
+.motion-slide {
+    position: relative;
+    float: left;
+    width: 1000px;
+    height: 400px;
+    overflow: hidden;
+}
+.motion-button-right,
+.motion-button-left {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    margin-top: -25px;
+    width: 30px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+}
+.motion-button-right {
+    left: auto;
+    right: 10px;
+}
+
+.slide {
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    background-color: white;
+}
+.slide-left {
+    left: 20%;
+}
+.slide-right {
+    right: 20%;
+}
+
+
+/*block*/
+.block {
+    width: 1000px;
+    height: 200px;
+    margin: 100px auto;
+}
+
+.container {
+    width: 800px;
+    margin: 100px auto;
+}
+.container::after {
+    display: table;
+    clear: both;
+    content: '';
+}
+
+
+/*circle*/
+.circle {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    border-radius: 50%;
+}
+.circle:nth-child(3n-2) {
+    margin-left: 0;
+}
+
+
+/*color*/
+.red {
+    background-color: #e23f3f;
+}
+.orange {
+    background-color: #F06317;
+}
+.yellow {
+    background-color: #F8C411;
+}
+.green {
+    background-color: #2ccc17;
+}
+.cyan {
+    background-color: #0CEABE;
+}
+.blue {
+    background-color: #1AB9F4;
+}
+.deep-blue {
+    background-color: #3C45F3;
+}
+.purple {
+    background-color: #985ece;
+}
+.pink {
+    background-color: #E317D2;
+}
