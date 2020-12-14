@@ -5,6 +5,10 @@ const buble = require('@rollup/plugin-buble');
 const { minify } = require('terser');
 const header = require('./header');
 
+const pkgJson = fs.readFileSync(`${process.cwd()}/package.json`);
+const pkgObj = JSON.parse( pkgJson );
+const libName = pkgObj.name;
+
 gulp.task('bundleJs', async () => {
     // 打包并转ES5
     let bundle = await rollup.rollup({
@@ -16,9 +20,9 @@ gulp.task('bundleJs', async () => {
 
     // 添加头部并生成文件
     bundle = await bundle.write({
-        file: './dist/motion.js',
+        file: `./dist/${libName}.js`,
         format: 'umd',
-        name: 'motion',
+        name: libName,
         banner: header
     });
 
@@ -31,7 +35,7 @@ gulp.task('bundleJs', async () => {
     });
 
 
-    fs.writeFileSync(`${process.cwd()}/dist/motion.min.js`, minified.code);
+    fs.writeFileSync(`${process.cwd()}/dist/${libName}.min.js`, minified.code);
 });
 
 gulp.task('default', gulp.series(['bundleJs']));
