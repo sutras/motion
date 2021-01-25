@@ -366,6 +366,8 @@ var mySwiper = new Swiper('.swiper-container',{
 
 
 # 更新日志
+## 2021-01-25
+- 添加 destroy 方法，用于在单页应用中卸载事件。
 
 ## 2019-10-29
 - 简化 data-motion 属性的值。

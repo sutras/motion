@@ -1,5 +1,5 @@
 /**
- * @version v2.0.0
+ * @version v2.1.0
  * @link https://github.com/sutras/motion#readme
  * @license MIT
  */
@@ -330,6 +330,11 @@
             return bottom >= viewTop - expandTop && top <= viewBottom + expandBottom;
         }
 
+        function unbindEvent() {
+            removeEventListener( options.scrollContainer, EVENT_SCROLL, throttledScrollHandler );
+            removeEventListener( window, EVENT_RESIZE, throttledScrollHandler );
+        }
+
         // window 滚动事件的处理程序
         function scrollHandler() {
             var i, el;
@@ -340,8 +345,7 @@
                     removeScrollBox( el );
                     i--;
                     if ( scrollBoxes.length === 0 ) {
-                        removeEventListener( options.scrollContainer, EVENT_SCROLL, throttledScrollHandler );
-                        removeEventListener( window, EVENT_RESIZE, throttledScrollHandler );
+                        unbindEvent();
                     }
                 }
             }
@@ -483,6 +487,10 @@
             addEventListener( window, EVENT_RESIZE, throttledScrollHandler );
             throttledScrollHandler();
         }
+
+        instance.destroy = function() {
+            unbindEvent();
+        };
 
         instance.execute = execute;
 

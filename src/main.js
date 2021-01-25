@@ -318,6 +318,11 @@ function motion( options ) {
         return bottom >= viewTop - expandTop && top <= viewBottom + expandBottom;
     }
 
+    function unbindEvent() {
+        removeEventListener( options.scrollContainer, EVENT_SCROLL, throttledScrollHandler );
+        removeEventListener( window, EVENT_RESIZE, throttledScrollHandler );
+    }
+
     // window 滚动事件的处理程序
     function scrollHandler() {
         let i, el;
@@ -328,8 +333,7 @@ function motion( options ) {
                 removeScrollBox( el );
                 i--;
                 if ( scrollBoxes.length === 0 ) {
-                    removeEventListener( options.scrollContainer, EVENT_SCROLL, throttledScrollHandler );
-                    removeEventListener( window, EVENT_RESIZE, throttledScrollHandler );
+                    unbindEvent();
                 }
             }
         }
@@ -471,6 +475,10 @@ function motion( options ) {
         addEventListener( window, EVENT_RESIZE, throttledScrollHandler );
         throttledScrollHandler();
     }
+
+    instance.destroy = function() {
+        unbindEvent();
+    };
 
     instance.execute = execute;
 
