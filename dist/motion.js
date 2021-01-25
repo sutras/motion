@@ -1,5 +1,5 @@
 /**
- * @version v2.1.1
+ * @version v2.1.2
  * @link https://github.com/sutras/motion#readme
  * @license MIT
  */
@@ -271,6 +271,7 @@
             disabled,
             throttledScrollHandler;
 
+        options = options || {};
 
         function getValueFromDataOrOptions( el, prop, isNumber ) {
             var attr = ATTR_DATA_MOTION + '-' + kebabCase( prop );

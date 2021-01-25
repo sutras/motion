@@ -259,6 +259,7 @@ function motion( options ) {
         disabled,
         throttledScrollHandler;
 
+    options = options || {};
 
     function getValueFromDataOrOptions( el, prop, isNumber ) {
         let attr = ATTR_DATA_MOTION + '-' + kebabCase( prop );
