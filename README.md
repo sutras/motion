@@ -329,6 +329,10 @@ var motionInstance = motion({
             <td>execute( Element [, queueName] )</td>
             <td>对所传元素执行指定队列的动画，默认队列名为default。</td>
         </tr>
+        <tr>
+            <td>destroy()</td>
+            <td>销毁motion实例，常用于单页应用。</td>
+        </tr>
     </tbody>
 </table>
 

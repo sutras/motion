@@ -477,6 +477,7 @@ function motion( options ) {
     }
 
     instance.destroy = function() {
+        scrollBoxes.length = 0;
         unbindEvent();
     };
 
