@@ -1,6 +1,6 @@
 {
   "name": "motion",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "基于animate.css的css3入场、强调、退场动画",
   "main": "src/main.js",
   "scripts": {

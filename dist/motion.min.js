@@ -1,5 +1,5 @@
 /**
- * @version v2.1.0
+ * @version v2.1.1
  * @link https://github.com/sutras/motion#readme
  * @license MIT
  */
