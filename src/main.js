@@ -477,6 +477,10 @@ function motion( options ) {
         throttledScrollHandler();
     }
 
+    instance.inspect = function() {
+        throttledScrollHandler();
+    };
+
     instance.destroy = function() {
         scrollBoxes.length = 0;
         unbindEvent();

@@ -330,6 +330,10 @@ var motionInstance = motion({
             <td>对所传元素执行指定队列的动画，默认队列名为default。</td>
         </tr>
         <tr>
+            <td>inspect()</td>
+            <td>正常情况下，在实例化motion和窗口滚动、大小改变时才会检查元素是否符合出场要求。但极个别情况下需要手动进行检查。</td>
+        </tr>
+        <tr>
             <td>destroy()</td>
             <td>销毁motion实例，常用于单页应用。</td>
         </tr>
@@ -370,6 +374,9 @@ var mySwiper = new Swiper('.swiper-container',{
 
 
 # 更新日志
+## 2021-01-26
+- 添加 inspect 方法，用于手动检查元素是否符合出场要求。
+
 ## 2021-01-25
 - 添加 destroy 方法，用于在单页应用中卸载事件。
 

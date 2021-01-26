@@ -1,5 +1,5 @@
 /**
- * @version v2.1.2
+ * @version v2.2.0
  * @link https://github.com/sutras/motion#readme
  * @license MIT
  */
@@ -488,6 +488,10 @@
             addEventListener( window, EVENT_RESIZE, throttledScrollHandler );
             throttledScrollHandler();
         }
+
+        instance.inspect = function() {
+            throttledScrollHandler();
+        };
 
         instance.destroy = function() {
             scrollBoxes.length = 0;
