@@ -478,6 +478,10 @@ function motion( options ) {
     }
 
     instance.inspect = function() {
+        scrollHandler();
+    };
+
+    instance.inspectThrottle = function() {
         throttledScrollHandler();
     };
 

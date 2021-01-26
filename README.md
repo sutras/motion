@@ -334,6 +334,10 @@ var motionInstance = motion({
             <td>正常情况下，在实例化motion和窗口滚动、大小改变时才会检查元素是否符合出场要求。但极个别情况下需要手动进行检查。</td>
         </tr>
         <tr>
+            <td>inspectThrottle()</td>
+            <td>和inspect()方法类似，和inspect()方法是同步立即检查；inspectThrottle()方法有一个节流的特性。</td>
+        </tr>
+        <tr>
             <td>destroy()</td>
             <td>销毁motion实例，常用于单页应用。</td>
         </tr>
@@ -375,7 +379,7 @@ var mySwiper = new Swiper('.swiper-container',{
 
 # 更新日志
 ## 2021-01-26
-- 添加 inspect 方法，用于手动检查元素是否符合出场要求。
+- 添加 inspect、inspectThrottle 方法，用于手动检查元素是否符合出场要求。
 
 ## 2021-01-25
 - 添加 destroy 方法，用于在单页应用中卸载事件。
