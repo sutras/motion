@@ -1,5 +1,5 @@
 /**
- * @version v2.2.0
+ * @version v2.3.0
  * @link https://github.com/sutras/motion#readme
  * @license MIT
  */
@@ -490,6 +490,10 @@
         }
 
         instance.inspect = function() {
+            scrollHandler();
+        };
+
+        instance.inspectThrottle = function() {
             throttledScrollHandler();
         };
 
