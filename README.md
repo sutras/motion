@@ -376,6 +376,9 @@ var mySwiper = new Swiper('.swiper-container',{
 在上面的例子中，涉及到一个`scroll`配置项和`execute`实例方法。
 `scroll`需设置为假，然后在指定的回调函数里，调用`execute`方法执行指定元素的指定队列的动画。
 
+# 在线演示
+[打开演示](https://sutras.github.io/motoin/)
+
 
 # 更新日志
 ## 2021-01-26
