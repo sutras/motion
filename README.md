@@ -377,7 +377,7 @@ var mySwiper = new Swiper('.swiper-container',{
 `scroll`需设置为假，然后在指定的回调函数里，调用`execute`方法执行指定元素的指定队列的动画。
 
 # 在线演示
-[打开演示](https://sutras.github.io/motoin/)
+[打开演示](https://sutras.github.io/motion/)
 
 
 # 更新日志
