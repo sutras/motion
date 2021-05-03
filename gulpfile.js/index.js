@@ -36,6 +36,7 @@ gulp.task('bundleJs', async () => {
 
 
     fs.writeFileSync(`${process.cwd()}/dist/${libName}.min.js`, minified.code);
+    fs.writeFileSync(`${process.cwd()}/docs/motion/js/${libName}.min.js`, minified.code);
 });
 
 gulp.task('default', gulp.series(['bundleJs']));
